@@ -1,7 +1,5 @@
 import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
-
-const MySwal = withReactContent(Swal)
+import axios from 'axios'
 
 
 const Login = () => {
@@ -50,7 +48,7 @@ const Login = () => {
     }
 
     // verify correct credentials email and password
-    if(email !== 'challenge@alkemy.org' && password !== 'react'){
+    if(email !== 'challenge@alkemy.org' || password !== 'react'){
       Swal.fire({
         title: 'Invalid credentials!',
         text: 'Do you want to continue',
@@ -64,6 +62,18 @@ const Login = () => {
       icon: 'success',
       title: 'Login successfully'
     })
+
+    axios.post('http://challenge-react.alkemy.org', {
+      email,
+      password
+    })
+    .then(function (response) {
+      const token = response.data.token 
+      console.log(token);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 
   }
 
