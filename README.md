@@ -7,5 +7,5 @@ Copy project
 [x] Login component
 [x] Validations, sweetalert
 [x] Axios in order to get token
-[ ] save token in local storage
-[ ] when login success and token got it, use react-router-dom to redirect a new view
+[x] save token in local storage
+[ ] use react-router-dom to redirect a new view (when login success and token)

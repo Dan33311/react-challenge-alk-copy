@@ -68,7 +68,8 @@ const Login = () => {
       password
     })
     .then(function (response) {
-      const token = response.data.token 
+      const token = response.data.token
+      localStorage.setItem('token', token) 
       console.log(token);
     })
     .catch(function (error) {
