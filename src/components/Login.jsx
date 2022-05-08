@@ -1,8 +1,11 @@
 import Swal from 'sweetalert2'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 
 const Login = () => {
+
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -69,7 +72,8 @@ const Login = () => {
     })
     .then(function (response) {
       const token = response.data.token
-      localStorage.setItem('token', token) 
+      localStorage.setItem('token', token)
+      navigate('/list') 
       console.log(token);
     })
     .catch(function (error) {
