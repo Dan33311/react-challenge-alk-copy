@@ -83,23 +83,25 @@ const Login = () => {
   }
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <label>
-          <span>Email:</span><br />
-          <input type="text" name="email"/>
-        </label>
-        <br />
+    <div className="container">
+      <div className="row d-flex flex-column justify-content-center align-items-center mt-5">
+        <form onSubmit={handleSubmit} className="col-8 col-sm-6 col-md-6 col-lg-4">
+          <label className='mb-2 w-100'>
+            <span>Email:</span><br />
+            <input type="text" name="email" className='form-control'/>
+          </label>
+          <br />
 
-        <label>
-          <span>Password:</span><br />
-          <input type="password" name="password"/>
-        </label>
-        <br />
+          <label className='mb-2 w-100'>
+            <span>Password:</span><br />
+            <input type="password" name="password" className='form-control'/>
+          </label>
+          <br />
 
-        <button>Enviar</button>
-      </form>
-    </>
+          <button className='btn btn-primary mt-2 w-100'>Enviar</button>
+        </form>
+      </div>
+    </div>
   );
 }
 
