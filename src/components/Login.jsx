@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 
 const Login = () => {
@@ -82,26 +82,36 @@ const Login = () => {
 
   }
 
+  const token = localStorage.getItem('token')
+
+
   return (
-    <div className="container">
-      <div className="row d-flex flex-column justify-content-center align-items-center mt-5">
-        <form onSubmit={handleSubmit} className="col-8 col-sm-6 col-md-6 col-lg-4">
-          <label className='mb-2 w-100'>
-            <span>Email:</span><br />
-            <input type="text" name="email" className='form-control'/>
-          </label>
-          <br />
+    <>
+      { token 
+        ? 
+          <Navigate to="/list" /> 
+        :
+          <div className="container">
+            <div className="row d-flex flex-column justify-content-center align-items-center mt-5">
+              <form onSubmit={handleSubmit} className="col-8 col-sm-6 col-md-6 col-lg-4">
+                <label className='mb-2 w-100'>
+                  <span>Email:</span><br />
+                  <input type="text" name="email" className='form-control'/>
+                </label>
+                <br />
 
-          <label className='mb-2 w-100'>
-            <span>Password:</span><br />
-            <input type="password" name="password" className='form-control'/>
-          </label>
-          <br />
+                <label className='mb-2 w-100'>
+                  <span>Password:</span><br />
+                  <input type="password" name="password" className='form-control'/>
+                </label>
+                <br />
 
-          <button className='btn btn-primary mt-2 w-100'>Enviar</button>
-        </form>
-      </div>
-    </div>
+                <button className='btn btn-primary mt-2 w-100'>Enviar</button>
+              </form>
+            </div>
+          </div>
+      }
+    </>
   );
 }
 
