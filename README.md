@@ -31,3 +31,22 @@ Copy project
 [x] 4.1 Armado de vista listado
 
 [x] 4.2 Proteccion de la ruta listado y login (renderizado condicional)
+
+[ ] 4.3 Getting data from API
+
+[ ] 4.4 Render API data in component
+
+[ ] 4.5 Handle errors getting API data
+
+[ ] 4.6 Details route for each item with unique url
+
+
+[ ] 5.1 Details route protection, localStorage to sessionStorage
+
+[ ] 5.2 Getting ID from details url, and Details view basics
+
+[ ] 5.3 Getting movie details from API
+
+[ ] 5.4 Save API data into the State and render API data
+
+[ ] 5.5
