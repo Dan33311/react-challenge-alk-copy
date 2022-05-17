@@ -32,13 +32,13 @@ Copy project
 
 [x] 4.2 Proteccion de la ruta listado y login (renderizado condicional)
 
-[ ] 4.3 Getting data from API
+[x] 4.3 Getting data from API
 
-[ ] 4.4 Render API data in component
+[x] 4.4 Render API data in component
 
-[ ] 4.5 Handle errors getting API data
+[x] 4.5 Handle errors getting API data
 
-[ ] 4.6 Details route for each item with unique url
+[x] 4.6 Details component basics, asign for each item an unique url
 
 
 [ ] 5.1 Details route protection, localStorage to sessionStorage

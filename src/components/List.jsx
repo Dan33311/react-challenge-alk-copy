@@ -1,4 +1,6 @@
 import axios from "axios";
+import Swal from 'sweetalert2'
+
 import { useEffect, useState } from "react";
 import { Navigate, useNavigate, Link } from "react-router-dom";
 
@@ -18,9 +20,18 @@ const List = () => {
         const moviesData = response.data.results
         setMoviesList(moviesData);
       })
+      .catch(error => {
+        Swal.fire({
+          title: `${error.message}!`,
+          text: 'Please try again later',
+          icon: 'error',
+          confirmButtonText: 'Cool'
+        })
+      })
   }, [])
   
   const token = localStorage.getItem('token')
+
 
   return (
     <>
@@ -36,8 +47,8 @@ const List = () => {
                   <div className="card-body">
                     <h5 className="card-title">{movie.title.substring(0, 36)}</h5>
                     <p className="card-text">{movie.overview.substring(0, 80)}</p>
-                    <button onClick={() => navigate('/details')} className="btn btn-primary">Details</button>
-                    {/* <Link to={`/details?movieID=${movie.id}`} className="btn btn-primary">Details</Link> */}
+                    {/* <button onClick={() => navigate('/details')} className="btn btn-primary">Details</button> */}
+                    <Link to={`/details?movieID=${movie.id}`} className="btn btn-primary">Details</Link>
                   </div>
                 </div>
               </div>
