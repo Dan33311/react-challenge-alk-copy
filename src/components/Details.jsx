@@ -1,6 +1,19 @@
+import { Navigate } from "react-router-dom"
+
 const Details = () => {
+
+  const token = sessionStorage.getItem('token')
+
+
   return (
-    <h1>Movie Details</h1>
+    <>
+      { !token
+        ?
+          <Navigate  to="/"/>
+        :
+          <h1>Movie Details</h1>
+      }
+    </>
   )
 }
 

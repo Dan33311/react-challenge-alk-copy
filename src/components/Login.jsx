@@ -72,7 +72,7 @@ const Login = () => {
     })
     .then(function (response) {
       const token = response.data.token
-      localStorage.setItem('token', token)
+      sessionStorage.setItem('token', token)
       navigate('/list') 
       console.log(token);
     })
@@ -82,7 +82,7 @@ const Login = () => {
 
   }
 
-  const token = localStorage.getItem('token')
+  const token = sessionStorage.getItem('token')
 
 
   return (
