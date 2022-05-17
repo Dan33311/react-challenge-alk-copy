@@ -41,12 +41,12 @@ Copy project
 [x] 4.6 Details component basics, asign for each item an unique url
 
 
-[ ] 5.1 Details route protection, localStorage to sessionStorage
+[x] 5.1 Details route protection, localStorage to sessionStorage
 
-[ ] 5.2 Getting ID from details url, and Details view basics
+[x] 5.2 Getting movie ID from details url, and Details view basics
 
-[ ] 5.3 Getting movie details from API
+[x] 5.3 Getting movie details from API
 
-[ ] 5.4 Save API data into the State and render API data
+[x] 5.4 Save API data into the State and render API data
 
 [ ] 5.5
